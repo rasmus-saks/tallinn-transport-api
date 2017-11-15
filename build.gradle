@@ -1,0 +1,43 @@
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.11'
+    id 'java'
+    id 'groovy'
+}
+apply plugin: 'maven-publish'
+
+group 'com.github.rasmussaks.tallinntransportapi'
+version '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+    testCompile group: 'log4j', name: 'log4j', version: '1.2.17'
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+}
+
+lombok {
+    version = "1.16.18"
+    sha256 = ""
+}
+
+jar {
+    from sourceSets.main.allSource
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+sourceCompatibility = 1.8

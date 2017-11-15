@@ -1,0 +1,4 @@
+Transport,RouteNum,ExpectedTimeInSeconds,ScheduleTimeInSeconds
+stop,1135
+bus,42,10,30,Kaubamaja
+bus,21,11,31,Balti jaam

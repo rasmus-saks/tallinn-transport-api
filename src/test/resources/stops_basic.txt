@@ -1,0 +1,2 @@
+ID;SiriID;Lat;Lng;Stops;Name;Info;Street;Area;City;Pikas2017.10.9
+08904-1;1135;5942749;2472192;08906-1;Taksopark;Extra information;The street;The area;The city
